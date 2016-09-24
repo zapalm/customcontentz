@@ -5,7 +5,7 @@
  * @copyright 2011-2016 zapalm
  * @link      http://prestashop.modulez.ru/en/ The module's homepage
  * @license   http://opensource.org/licenses/afl-3.0.php Academic Free License (AFL 3.0)
-*}
+ **}
 
 <!-- MODULE: customcontentz -->
 {literal}

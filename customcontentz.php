@@ -16,7 +16,7 @@ class CustomContentz extends Module
     function __construct() {
         $this->name          = 'customcontentz';
         $this->version       = '0.8';
-        $this->tab           = version_compare(_PS_VERSION_, '1.4', '>=') ? 'front_office_features' : 'Blocks';;
+        $this->tab           = version_compare(_PS_VERSION_, '1.4', '>=') ? 'front_office_features' : 'Blocks';
         $this->author        = 'zapalm';
         $this->need_instance = 0;
         $this->bootstrap     = false;
@@ -88,7 +88,7 @@ class CustomContentz extends Module
 
         $smarty->assign(array(
             'place'                     => 'home',
-            'CUSTOMCONTENTZ_HOME_TEXT'  => Configuration::get('CUSTOMCONTENTZ_HOME_TEXT')
+            'CUSTOMCONTENTZ_HOME_TEXT'  => Configuration::get('CUSTOMCONTENTZ_HOME_TEXT'),
         ));
 
         return $this->display(__FILE__, 'customcontentz.tpl');
@@ -99,7 +99,7 @@ class CustomContentz extends Module
 
         $smarty->assign(array(
             'place'                   => 'top',
-            'CUSTOMCONTENTZ_TOP_TEXT' => Configuration::get('CUSTOMCONTENTZ_TOP_TEXT')
+            'CUSTOMCONTENTZ_TOP_TEXT' => Configuration::get('CUSTOMCONTENTZ_TOP_TEXT'),
         ));
 
         return $this->display(__FILE__, 'customcontentz.tpl');
@@ -115,7 +115,7 @@ class CustomContentz extends Module
         }
 
         $smarty->assign(array(
-            'place'                      => 'footer',
+            'place'                          => 'footer',
             'CUSTOMCONTENTZ_CAT_FOOTER_TEXT' => $categoryText,
         ));
 
