@@ -29,6 +29,7 @@ class CustomContentz extends Module
 
     function install() {
         return parent::install()
+            && $this->registerHook('header')
             && $this->registerHook('home')
             && $this->registerHook('top')
             && $this->registerHook('footer')
@@ -83,6 +84,10 @@ class CustomContentz extends Module
         return $output;
     }
 
+    public function hookHeader() {
+        $this->context->controller->addCSS($this->_path . '/views/css/customcontentz.css');
+    }
+
     function hookHome($params) {
         global $smarty;
 
@@ -91,7 +96,7 @@ class CustomContentz extends Module
             'CUSTOMCONTENTZ_HOME_TEXT'  => Configuration::get('CUSTOMCONTENTZ_HOME_TEXT'),
         ));
 
-        return $this->display(__FILE__, 'customcontentz.tpl');
+        return $this->display(__FILE__, '/views/templates/customcontentz.tpl');
     }
 
     function hookTop($params) {
@@ -102,7 +107,7 @@ class CustomContentz extends Module
             'CUSTOMCONTENTZ_TOP_TEXT' => Configuration::get('CUSTOMCONTENTZ_TOP_TEXT'),
         ));
 
-        return $this->display(__FILE__, 'customcontentz.tpl');
+        return $this->display(__FILE__, '/views/templates/customcontentz.tpl');
     }
 
     function hookFooter($params) {
@@ -114,11 +119,15 @@ class CustomContentz extends Module
             return '';
         }
 
+        // TODO: add option - show category description
+        //$category = new Category(Tools::getValue('id_category'), $this->context->language->id);
+        //$categoryDescription = strip_tags($category->description);
+
         $smarty->assign(array(
             'place'                          => 'footer',
             'CUSTOMCONTENTZ_CAT_FOOTER_TEXT' => $categoryText,
         ));
 
-        return $this->display(__FILE__, 'customcontentz.tpl');
+        return $this->display(__FILE__, '/views/templates/customcontentz.tpl');
     }
 }

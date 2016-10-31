@@ -1,0 +1,24 @@
+.customcontentz-top {
+    display: block;
+    float: left;
+    font-size: 18px;
+    padding-top: 20px;
+    width: 100%;
+}
+.customcontentz-home {
+    display: block;
+    float: left;
+    font-size: 18px;
+    padding-top: 20px;
+    width: 100%;
+}
+.customcontentz-category-footer {
+    color: #fff;
+    display: block;
+    float: left;
+    font-size: 14px;
+    height: 60px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    width: 100%;
+}

@@ -8,32 +8,16 @@
  **}
 
 <!-- MODULE: customcontentz -->
-{literal}
-	<STYLE TYPE="text/css">
-		<!--
-		.customcontentz-top {
-
-		}
-		.customcontentz-home {
-
-		}
-		.customcontentz-category-footer {
-
-		}
-		-->
-	</STYLE>
-{/literal}
-
 {if $place == 'home'}
 	<div class="customcontentz-home">
 		{$CUSTOMCONTENTZ_HOME_TEXT}
 	</div>
 {elseif $place == 'top'}
-	<div class="customcontentz-top">
+	<div class="customcontentz-top col-lg-12">
 		{$CUSTOMCONTENTZ_TOP_TEXT}
 	</div>
 {elseif $place == 'footer'}
-	<div class="customcontentz-category-footer">
+	<div class="customcontentz-category-footer col-lg-12">
 		{$CUSTOMCONTENTZ_CAT_FOOTER_TEXT}
 	</div>
 {/if}
