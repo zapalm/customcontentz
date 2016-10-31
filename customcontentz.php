@@ -1,6 +1,6 @@
 <?php
 /**
- * Custom contents: module for PrestaShop 1.2 - 1.6
+ * Custom contents: module for PrestaShop 1.5-1.6
  *
  * @author    zapalm <zapalm@ya.ru>
  * @copyright 2011-2016 zapalm
@@ -16,7 +16,7 @@ class CustomContentz extends Module
     function __construct() {
         $this->name          = 'customcontentz';
         $this->version       = '0.8';
-        $this->tab           = version_compare(_PS_VERSION_, '1.4', '>=') ? 'front_office_features' : 'Blocks';
+        $this->tab           = 'front_office_features';
         $this->author        = 'zapalm';
         $this->need_instance = 0;
         $this->bootstrap     = false;

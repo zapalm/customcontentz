@@ -1,5 +1,5 @@
 {**
- * Custom contents: module for PrestaShop 1.2-1.6
+ * Custom contents: module for PrestaShop 1.5-1.6
  *
  * @author    zapalm <zapalm@ya.ru>
  * @copyright 2011-2016 zapalm
