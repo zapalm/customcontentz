@@ -15,7 +15,7 @@ class CustomContentz extends Module
 {
     function __construct() {
         $this->name          = 'customcontentz';
-        $this->version       = '0.8';
+        $this->version       = '0.9.0';
         $this->tab           = 'front_office_features';
         $this->author        = 'zapalm';
         $this->need_instance = 0;
