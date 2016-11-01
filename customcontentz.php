@@ -98,9 +98,7 @@ class CustomContentz extends Module
     }
 
     function hookHome($params) {
-        global $smarty;
-
-        $smarty->assign(array(
+        $this->context->smarty->assign(array(
             'place'                     => 'home',
             'CUSTOMCONTENTZ_HOME_TEXT'  => Configuration::get('CUSTOMCONTENTZ_HOME_TEXT'),
         ));
@@ -109,9 +107,7 @@ class CustomContentz extends Module
     }
 
     function hookTop($params) {
-        global $smarty;
-
-        $smarty->assign(array(
+        $this->context->smarty->assign(array(
             'place'                   => 'top',
             'CUSTOMCONTENTZ_TOP_TEXT' => Configuration::get('CUSTOMCONTENTZ_TOP_TEXT'),
         ));
@@ -120,8 +116,6 @@ class CustomContentz extends Module
     }
 
     function hookFooter($params) {
-        global $smarty;
-
         // display text on a category page only
         $categoryText = (string)Configuration::get('CUSTOMCONTENTZ_CAT_FOOTER_TEXT');
         if ($categoryText === '' || (int)Tools::getValue('id_category') <= 0) {
@@ -133,7 +127,7 @@ class CustomContentz extends Module
             $categoryText = strip_tags($category->description) . ' ' . $categoryText;
         }
 
-        $smarty->assign(array(
+        $this->context->smarty->assign(array(
             'place'                          => 'footer',
             'CUSTOMCONTENTZ_CAT_FOOTER_TEXT' => $categoryText,
         ));
