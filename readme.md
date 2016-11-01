@@ -4,7 +4,7 @@ Custom contents: module for PrestaShop 1.5-1.6
 Description
 ------------
 This is a module for [PrestaShop][4] e-commerce solution (v1.5-1.6) that allows to append a text to a different places of a site.
-More info: http://prestashop.modulez.ru/en/
+More info: http://prestashop.modulez.ru/en/frontend-features/42-custom-contents.html
 
 Installation & Update
 ------------
